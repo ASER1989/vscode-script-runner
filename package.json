@@ -1,0 +1,64 @@
+{
+  "name": "package-scripts-runner",
+  "displayName": "Package Scripts Runner",
+  "description": "Show and run npm/yarn scripts from package.json",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "scriptRunner",
+          "title": "Scripts",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "scriptRunner": [
+        {
+          "id": "scriptList",
+          "name": "Project Scripts"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "packageScripts.runScript",
+        "title": "Run Script"
+      },
+      {
+        "command": "packageScripts.debugScript",
+        "title": "Debug Script"
+      }
+    ],
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "packageScripts.debugScript",
+          "when": "view == scriptList && viewItem == scriptItem",
+          "group": "inline"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.0.0",
+    "vsce": "^2.15.0"
+  }
+}

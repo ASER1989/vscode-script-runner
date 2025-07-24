@@ -1,9 +1,10 @@
 {
-  "name": "package-scripts-runner",
-  "displayName": "Package Scripts Runner",
+  "name": "package-scripts-panel",
+  "displayName": "Package Scripts Panel",
   "description": "Show and run npm/yarn scripts from package.json",
-  "author": "aser1989@sina.com",
   "version": "1.0.0",
+  "author": "aser1989@sina.com",
+  "publisher": "ASER1989",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -22,14 +23,14 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "scriptRunner",
+          "id": "scriptPanel",
           "title": "Scripts",
           "icon": "media/icon.svg"
         }
       ]
     },
     "views": {
-      "scriptRunner": [
+      "scriptPanel": [
         {
           "id": "scriptList",
           "name": "Project Scripts"

@@ -2,9 +2,14 @@
   "name": "package-scripts-runner",
   "displayName": "Package Scripts Runner",
   "description": "Show and run npm/yarn scripts from package.json",
+  "author": "aser1989@sina.com",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.85.0"
+  },
+  "repository": {
+     "type": "git",
+     "url": "https://github.com/ASER1989/vscode-script-runner.git"
   },
   "categories": [
     "Other"
